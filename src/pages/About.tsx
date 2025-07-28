@@ -5,24 +5,26 @@ import { GraduationCap, Award, Users, Calendar, MapPin, Mail, Phone } from "luci
 
 const About = () => {
   const qualifications = [
-    "MBBS - King George Medical University, Lucknow",
-    "MD Psychiatry - All India Institute of Medical Sciences, Delhi",
-    "Fellowship in Child & Adolescent Psychiatry - NIMHANS, Bangalore",
-    "Diploma in Psychological Medicine - Royal College of Physicians, UK"
+    "MBBS - Kasturba Medical College, Manipal",
+    "DPM/DNB Psychiatry - All India Institute of Medical Sciences, Delhi",
+    "Life Fellow - Indian Psychiatric Society",
+    "Life Fellow - Indian Association of Biological Psychiatry",
+    "Life Fellow - Indian Association of Social Psychiatry",
+    "Life Fellow - Indian Association of Private Psychiatry."
   ];
 
   const experience = [
     {
-      title: "Senior Consultant Psychiatrist",
-      organization: "Apollo Hospitals, Mumbai",
+      title: "HOD and Senior Consultant",
+      organization: "Fortis Hopital, Shalimar Bagh",
       duration: "2018 - Present",
       description: "Leading the mental health department and specialized treatment programs"
     },
     {
-      title: "Associate Professor",
-      organization: "Grant Medical College, Mumbai",
+      title: "Founder and Director",
+      organization: "Chhabra Psychiatry Centre, Rohini, Delhi",
       duration: "2015 - 2018",
-      description: "Teaching and research in psychiatry and mental health"
+      description: "Running my own clinic"
     },
     {
       title: "Consultant Psychiatrist",
@@ -33,11 +35,11 @@ const About = () => {
   ];
 
   const achievements = [
-    "Published 25+ research papers in international journals",
+    "Published 14+ articles in indexed journals and 2 chapters in a Psychiatry Textbook",
     "Speaker at 15+ national and international conferences",
-    "Recipient of 'Best Psychiatrist Award' - Indian Medical Association 2022",
+    "Recipient of Ravi Pandey Memorial Award (2006), WPA Fellowship in Child Psychiatry (2008) and Asian Federation Fellowship (2012).",
     "Successfully treated 2000+ patients with various mental health conditions",
-    "Established innovative treatment protocols for bipolar disorder"
+    "Immediate Past President of the Delhi Psychiatric Society(DPS), the largest association of Psychiatrists and Psychologists in Delhi-NCR"
   ];
 
   return (
@@ -49,11 +51,11 @@ const About = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
-              About Dr. Rajesh Kumar
+              About Dr. Vishal Chhabra
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               A compassionate psychiatrist dedicated to providing comprehensive mental health care 
-              with over 15 years of experience in treating various psychiatric conditions.
+              with over 21 years of experience in treating various psychiatric conditions.
             </p>
           </div>
 
@@ -66,23 +68,23 @@ const About = () => {
                     <span className="text-4xl font-display font-bold text-white">DK</span>
                   </div>
                   <div className="text-center space-y-3">
-                    <h3 className="font-display font-semibold text-xl">Dr. Rajesh Kumar</h3>
-                    <p className="text-muted-foreground">MD Psychiatry, MBBS</p>
-                    <Badge variant="secondary" className="mx-auto">15+ Years Experience</Badge>
+                    <h3 className="font-display font-semibold text-xl">Dr. Vishal Chhabra</h3>
+                    <p className="text-muted-foreground">MBBS, DPM, DNB(Psychiatry)</p>
+                    <Badge variant="secondary" className="mx-auto">21+ Years Experience</Badge>
                   </div>
                   
                   <div className="mt-6 space-y-3">
                     <div className="flex items-center space-x-3 text-sm">
                       <MapPin className="w-4 h-4 text-primary" />
-                      <span>Mumbai, Maharashtra</span>
+                      <span>Delhi, India</span>
                     </div>
                     <div className="flex items-center space-x-3 text-sm">
                       <Phone className="w-4 h-4 text-primary" />
-                      <span>+91 98765 43210</span>
+                      <span>+91 9891055258</span>
                     </div>
                     <div className="flex items-center space-x-3 text-sm">
                       <Mail className="w-4 h-4 text-primary" />
-                      <span>dr.rajesh@drmindcare.com</span>
+                      <span>drvishal2010@yahoo.com</span>
                     </div>
                   </div>
                 </CardContent>
