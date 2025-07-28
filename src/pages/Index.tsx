@@ -25,13 +25,13 @@ const Index = () => {
       icon: Users
     },
     {
-      number: "15+",
+      number: "21+",
       label: "Years Experience",
       icon: Award
     },
     {
-      number: "25+",
-      label: "Research Papers",
+      number: "14+",
+      label: "Articles",
       icon: Brain
     },
     {
@@ -49,12 +49,6 @@ const Index = () => {
       features: ["Personalized treatment", "Confidential sessions", "Flexible scheduling"]
     },
     {
-      title: "Group Counseling",
-      description: "Supportive group sessions for shared experiences and healing.",
-      icon: Users,
-      features: ["Peer support", "Shared experiences", "Cost-effective"]
-    },
-    {
       title: "Family Therapy",
       description: "Comprehensive family counseling for relationship healing.",
       icon: Shield,
@@ -63,13 +57,19 @@ const Index = () => {
   ];
 
   const testimonials = [
-    {
-      name: "Priya Sharma",
-      location: "Mumbai",
-      rating: 5,
-      text: "Dr. Kumar helped me overcome my anxiety. His compassionate approach made all the difference.",
-      condition: "Anxiety Disorder"
-    },
+  {
+    name: "Srishti Jaiswal",
+    location: "Delhi",
+    rating: 5,
+    text: `I just wanted to share the incredible impact Dr. Vishal has had on my life. For more than a year, I was struggling with intense and frightening anxiety, feeling like I was in a really tough spot. If it weren't for his help, I honestly can't imagine where I would be today.
+
+Dr. Vishal has been an absolute lifesaver for me. His support, guidance, and expertise have been nothing short of amazing. He truly is the best. I can't thank him enough for helping me through such a challenging time.
+
+If you ever find yourself in need of support or guidance, I highly recommend reaching out to Dr. Vishal. Thank you, Dr. Vishal, for being the light in my darkness.`,
+    condition: "Anxiety Disorder"
+  }
+];
+
     {
       name: "Rajesh Patel",
       location: "Delhi",
@@ -78,10 +78,13 @@ const Index = () => {
       condition: "Bipolar Disorder"
     },
     {
-      name: "Anita Singh",
-      location: "Bangalore",
+      name: "Hemant Khemani",
+      location: "Delhi",
       rating: 5,
-      text: "The family therapy sessions transformed our relationships. Highly recommended!",
+      text: `Mind diseases are much more complicated and critical than physical ailments. What more we could have asked for, a doctor who is a great listener, compassionate and kind. Found Dr. Vishal in online search, saw some of his videos on youtube and after reading the reviews booked an appointment. 
+      Dr. Vishal heard our case very patiently, didn't mind staying late over multiple sessions and made sure that patient feels comfortable enough to share her mind.
+      His treatment is very effective and he keeps in mind every patient's capacity of taking medicines. It took us couple of sessions to see the results and then the patient kept on getting better.
+      He not only counselled the patient but also the family to deal with the situation in a better way. I am grateful to him for all his support.`,
       condition: "Family Counseling"
     }
   ];
@@ -95,14 +98,14 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <Badge variant="secondary" className="mb-4">
-              Leading Mental Health Care in India
+              Leading Mental Health Care Specalist in India
             </Badge>
             <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
               Compassionate Care for
               <span className="text-primary"> Mental Wellness</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
-              Dr. Rajesh Kumar brings over 15 years of expertise in psychiatry, providing 
+              Dr. Vishal Chhabra brings over 21 years of expertise in psychiatry, providing 
               evidence-based treatment for depression, anxiety, bipolar disorder, and more.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -139,7 +142,7 @@ const Index = () => {
                   <MapPin className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-semibold">Location</p>
-                    <p className="text-sm text-muted-foreground">Mumbai, Maharashtra</p>
+                    <p className="text-sm text-muted-foreground">Rohini, Delhi</p>
                   </div>
                 </div>
               </div>
