@@ -67,8 +67,7 @@ Dr. Vishal has been an absolute lifesaver for me. His support, guidance, and exp
 
 If you ever find yourself in need of support or guidance, I highly recommend reaching out to Dr. Vishal. Thank you, Dr. Vishal, for being the light in my darkness.`,
     condition: "Anxiety Disorder"
-  }
-];
+  },
 
     {
       name: "Rajesh Patel",
