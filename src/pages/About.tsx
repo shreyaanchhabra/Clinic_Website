@@ -39,7 +39,8 @@ const About = () => {
     "Speaker at 15+ national and international conferences",
     "Recipient of Ravi Pandey Memorial Award (2006), WPA Fellowship in Child Psychiatry (2008) and Asian Federation Fellowship (2012).",
     "Successfully treated 2000+ patients with various mental health conditions",
-    "Immediate Past President of the Delhi Psychiatric Society(DPS), the largest association of Psychiatrists and Psychologists in Delhi-NCR"
+    "Immediate Past President of the Delhi Psychiatric Society(DPS), the largest association of Psychiatrists and Psychologists in Delhi-NCR",
+    "Co-Chairman of the IPS (Indian Psychiatric Society) Membership(2023-24) and Chairperson, LGBT Task Force, IPS(2022-23)"
   ];
 
   return (

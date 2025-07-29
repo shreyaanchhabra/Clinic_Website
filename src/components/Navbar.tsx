@@ -23,7 +23,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
             <h1 className="text-xl font-display font-bold text-primary">
-              Dr. Mind Care
+              Dr. Vishal Chhabra
             </h1>
           </Link>
 
@@ -50,9 +50,11 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <Phone className="w-4 h-4" />
-              <span>+91 98765 43210</span>
+              <span>+91 98995 24050</span>
             </div>
-            <Button variant="appointment" size="sm">
+            <Button variant="appointment" 
+              size="sm"
+              onClick={() => window.open("https://wa.me/919899524050", "_blank")}>
               Book Appointment
             </Button>
           </div>
@@ -60,7 +62,7 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
-              onClick={() => setIsOpen(!isOpen)}
+               onClick={() => window.open("https://wa.me/919899524050", "_blank")}
               className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary hover:bg-primary/5 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -94,7 +96,7 @@ const Navbar = () => {
               </div>
               <div className="flex items-center px-3 space-x-2 text-sm text-muted-foreground mb-3">
                 <Mail className="w-4 h-4" />
-                <span>contact@drmindcare.com</span>
+                <span>drvishal2010@yahoo.com</span>
               </div>
               <div className="px-3">
                 <Button variant="appointment" size="sm" className="w-full">
