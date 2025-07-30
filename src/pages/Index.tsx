@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 import { 
   Phone, 
   Mail, 
@@ -16,6 +17,7 @@ import {
   Star,
   ArrowRight
 } from "lucide-react";
+
 
 const Index = () => {
   const achievements = [
@@ -53,22 +55,28 @@ const Index = () => {
       description: "Comprehensive family counseling for relationship healing.",
       icon: Shield,
       features: ["Family dynamics", "Communication skills", "Conflict resolution"]
+    },
+    {
+      title: "Medication Management",
+      description: "Expert guidance on psychiatric medications for optimal mental health.",
+      icon: Brain,
+      features: ["Family dynamics", "Communication skills", "Conflict resolution"]
     }
   ];
 
   const testimonials = [
-  {
-    name: "Srishti Jaiswal",
-    location: "Delhi",
-    rating: 5,
-    text: `I just wanted to share the incredible impact Dr. Vishal has had on my life. For more than a year, I was struggling with intense and frightening anxiety, feeling like I was in a really tough spot. If it weren't for his help, I honestly can't imagine where I would be today.
+    // ... testimonials array unchanged ...
+    {
+      name: "Srishti Jaiswal",
+      location: "Delhi",
+      rating: 5,
+      text: `I just wanted to share the incredible impact Dr. Vishal has had on my life. For more than a year, I was struggling with intense and frightening anxiety, feeling like I was in a really tough spot. If it weren't for his help, I honestly can't imagine where I would be today.
 
 Dr. Vishal has been an absolute lifesaver for me. His support, guidance, and expertise have been nothing short of amazing. He truly is the best. I can't thank him enough for helping me through such a challenging time.
 
 If you ever find yourself in need of support or guidance, I highly recommend reaching out to Dr. Vishal. Thank you, Dr. Vishal, for being the light in my darkness.`,
-    condition: "Anxiety Disorder"
-  },
-
+      condition: "Anxiety Disorder"
+    },
     {
       name: "Rajesh Patel",
       location: "Delhi",
@@ -85,6 +93,31 @@ If you ever find yourself in need of support or guidance, I highly recommend rea
       His treatment is very effective and he keeps in mind every patient's capacity of taking medicines. It took us couple of sessions to see the results and then the patient kept on getting better.
       He not only counselled the patient but also the family to deal with the situation in a better way. I am grateful to him for all his support.`,
       condition: "Family Counseling"
+    },
+    {
+      name: "Hemant Khemani",
+      rating: 5,
+      location: "Delhi",
+      text: `Due to some bad memories and incidents that happened in the past, I was a victim of acute depression, brain fogging, sleeping disorder etc. Unlike physical injury which is tangible, brain diseases are very difficult to diagnose and accept.
+
+Thanks to my friend who referred me to Dr Vishal Chhabra . His great listening and pacifying skills helped me to overcome my problems . He became more of a mentor which made the session more fruitful and trustworthy. This resulted in more information sharing which is very useful for depression patients because not everything can be shared with everyone. My journey to recovery took 3 years which was a rollercoaster ride. Regular medication and counseling had played a very crucial role. Some other activities which helped me to speed up my recovery were mindful exercises, some kind of physical activity which involved yoga, gym, listening to podcasts(very helpful) , coloring mandala and other forms of activities which makes me happy.
+
+We all are haunted by our past, learn from it, accept it and move on. It's not important to prove anything to anyone because failure is a key element to retain success. I wish I could have contacted him sooner.`,
+      condition: "Depression and Sleeping Disorder"
+    },
+    {
+      name: "Shikha Dadwal",
+      rating: 5,
+      location: "Pune",
+      text: `After running from pillar to post, to the most brilliant doctors of New Delhi and Pune. Me and my family finally went to see Dr. Chhabra. He is not just a good doctor but also a thorough professional and a kind human being. They say mental illness is incurable but one can learn to manage it. He is a doctor who can help you do that with the right medication and advice. He is open to ideas and discussion. Me and family are forever thankful to him.`,
+      condition: "Mental Health Counseling"
+    },
+    {
+      name: "Abhishek Jain",
+      rating: 5,
+      location: "Delhi",
+      text: `When I came to Dr Vishal in the year 2019 I was having continuous panic attacks and lost all my confidence that I would be able to complete my CA but after starting treatment from doctor Vishal my situation start to improve slowly and after struggling for 12 years I completed my dream of becoming CA in 2023. Really I want to say that doctor Vishal helped me alot in clearing my CA and in the last I want to say that if I can everybody can achieve their dreams Thanks sir once again for your support`,
+      condition: "Panic Attacks and Anxiety"
     }
   ];
 
@@ -95,7 +128,7 @@ If you ever find yourself in need of support or guidance, I highly recommend rea
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <Badge variant="secondary" className="mb-4">
               Leading Mental Health Care Specalist in India
             </Badge>
@@ -107,12 +140,49 @@ If you ever find yourself in need of support or guidance, I highly recommend rea
               Dr. Vishal Chhabra brings over 21 years of expertise in psychiatry, providing 
               evidence-based treatment for depression, anxiety, bipolar disorder, and more.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button variant="hero" size="lg" className="flex items-center space-x-2">
+            {/* Stylish Image Placement */}
+            <div className="flex justify-center">
+                <div className="relative group w-full max-w-6xl mx-auto -ml-8 sm:-ml-16">
+                  <img
+                  src="/homepagepic2.png"
+                  alt="Dr. Vishal Chhabra"
+                  className="rounded-3xl shadow-2xl border-10 border-white/80 group-hover:scale-105 group-hover:shadow-3xl transition-all duration-300 object-cover w-full h-[420px] sm:h-[500px]"
+                  style={{
+                    objectPosition: "center top"
+                  }}
+                  />
+                  <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-white/90 px-8 py-3 rounded-full shadow-lg text-primary font-semibold text-xl border border-primary/20">
+                  Dr. Vishal Chhabra
+                  </div>
+                </div>
+            </div>
+            {/* End Stylish Image */}
+            <div className="flex flex-wrap justify-center gap-4 mt-10">
+              <Button
+                variant="default"
+                size="lg"
+                className="flex items-center space-x-2"
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/919899524050?text=Hi%20Dr.%20Chhabra%2C%20I%27d%20like%20to%20book%20an%20appointment.",
+                    "_blank"
+                  )
+                }
+              >
                 <Calendar className="w-5 h-5" />
                 <span>Book Appointment</span>
               </Button>
-              <Button variant="outline" size="lg" className="flex items-center space-x-2">
+              <Button
+                variant="outline"
+                size="lg"
+                className="flex items-center space-x-2"
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/917840055258?text=Hi%20Dr.%20Chhabra%2C%20I%27d%20like%20to%20book%20an%20emergency%20appointment.",
+                    "_blank"
+                  )
+                }
+              >
                 <Phone className="w-5 h-5" />
                 <span>Emergency Consultation</span>
               </Button>
@@ -127,21 +197,21 @@ If you ever find yourself in need of support or guidance, I highly recommend rea
                   <Phone className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-semibold">Call Now</p>
-                    <p className="text-sm text-muted-foreground">+91 98765 43210</p>
+                    <p className="text-sm text-muted-foreground">+91 98995 24050</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center space-x-3">
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-semibold">Email Us</p>
-                    <p className="text-sm text-muted-foreground">contact@drmindcare.com</p>
+                    <p className="text-sm text-muted-foreground">drvishal2010@yahoo.com</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center space-x-3">
-                  <MapPin className="w-5 h-5 text-primary" />
+                  <MapPin className="w-9 h-9 text-primary" />
                   <div>
-                    <p className="font-semibold">Location</p>
-                    <p className="text-sm text-muted-foreground">Rohini, Delhi</p>
+                    <p className="font-semibold">Clinic Location</p>
+                    <p className="text-sm text-muted-foreground">107-108, 1st Floor, RG-1 Complex, Opp. Balaji Mandir, Prashant Vihar Sector -14, Rohini, Delhi-110085</p>
                   </div>
                 </div>
               </div>
@@ -263,13 +333,25 @@ If you ever find yourself in need of support or guidance, I highly recommend rea
                 discover how we can help you achieve mental wellness.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button variant="hero" size="lg" className="flex items-center space-x-2">
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="flex items-center space-x-2"
+                  onClick={() =>
+                    window.open(
+                      "https://wa.me/919899524050?text=Hi%20Dr.%20Chhabra%2C%20I%27d%20like%20to%20book%20an%20appointment.",
+                      "_blank"
+                    )
+                  }
+                >
                   <Calendar className="w-5 h-5" />
                   <span>Schedule Consultation</span>
                   <ArrowRight className="w-4 h-4" />
                 </Button>
-                <Button variant="outline" size="lg">
-                  Learn More About Our Services
+                <Button asChild variant="outline" size="lg">
+                  <Link to="/treatment">
+                    Learn More About Our Services
+                  </Link>
                 </Button>
               </div>
             </CardContent>
