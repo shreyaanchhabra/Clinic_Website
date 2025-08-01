@@ -22,12 +22,12 @@ import {
 const Index = () => {
   const achievements = [
     {
-      number: "2000+",
+      number: "10,000+",
       label: "Patients Treated",
       icon: Users
     },
     {
-      number: "21+",
+      number: "24+",
       label: "Years Experience",
       icon: Award
     },
@@ -129,20 +129,17 @@ We all are haunted by our past, learn from it, accept it and move on. It's not i
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
-            <Badge variant="secondary" className="mb-4">
-              Leading Mental Health Care Specalist in India
-            </Badge>
             <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-6 leading-tight">
               Compassionate Care for
               <span className="text-primary"> Mental Wellness</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
-              Dr. Vishal Chhabra brings over 21 years of expertise in psychiatry, providing 
+              Dr. Vishal Chhabra brings over 24 years of expertise in psychiatry, providing 
               evidence-based treatment for depression, anxiety, bipolar disorder, and more.
             </p>
             {/* Stylish Image Placement */}
             <div className="flex justify-center">
-                <div className="relative group w-full max-w-6xl mx-auto -ml-8 sm:-ml-16">
+                <div className="relative group w-full max-w-6xl mx-auto sm:-ml-22">
                   <img
                   src="/homepagepic2.png"
                   alt="Dr. Vishal Chhabra"
@@ -151,9 +148,10 @@ We all are haunted by our past, learn from it, accept it and move on. It's not i
                     objectPosition: "center top"
                   }}
                   />
-                  <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-white/90 px-8 py-3 rounded-full shadow-lg text-primary font-semibold text-xl border border-primary/20">
-                  Dr. Vishal Chhabra
-                  </div>
+                  {/* Stylish Overlay Text */}
+                  { /* <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 bg-white/90 px-8 py-3 rounded-full shadow-lg text-primary font-semibold text-xl border border-primary/20">
+                  Dr. Vishal Chhabra 
+                  </div>*/}
                 </div>
             </div>
             {/* End Stylish Image */}
@@ -169,7 +167,7 @@ We all are haunted by our past, learn from it, accept it and move on. It's not i
                   )
                 }
               >
-                <Calendar className="w-5 h-5" />
+                <Calendar className="w-10 h-10" />
                 <span>Book Appointment</span>
               </Button>
               <Button
@@ -353,6 +351,45 @@ We all are haunted by our past, learn from it, accept it and move on. It's not i
                     Learn More About Our Services
                   </Link>
                 </Button>
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.1153897650365!2d77.1323001752923!3d28.716097375619164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0164e213d981%3A0x1684409a2dd6b4e1!2sDr.%20Vishal%20Chhabra!5e0!3m2!1sen!2sin!4v1753887514557!5m2!1sen!2sin"
+  width="600"
+  height="450"
+  style={{ border: 10, borderColor: '#e6ebe5ff', borderRadius: '0.75rem' }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  className="w-full h-64 rounded-xl shadow-lg"
+  title="Dr. Vishal Chhabra Location"
+/>
+<div className="flex flex-col items-center w-full mt-6 space-y-4">
+  <Button
+    asChild
+    variant="default"
+    size="lg"
+    className="flex items-center space-x-2"
+  >
+    <a
+      href="https://maps.app.goo.gl/HSPvYKSwt4E2U1dS6"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <MapPin className="w-5 h-5" />
+      <span>Get Directions on Google Maps</span>
+    </a>
+  </Button>
+  <div className="bg-white/80 rounded-lg px-6 py-3 shadow text-center border border-primary/20">
+    <span className="font-semibold text-primary text-lg">Clinic Timings:</span>
+    <div className="mt-1 text-muted-foreground text-base">
+      Mon, Tue, Wed, Fri: <span className="font-medium text-foreground">12:00 – 2:00 PM</span>
+      <br />
+      Mon, Tue, Wed, Fri, Sat: <span className="font-medium text-foreground">6:00 PM - 8:00 PM</span>
+      <br />
+      Sunday: <span className="font-medium text-foreground">CLOSED</span>
+    </div>
+  </div>
+</div>
+
               </div>
             </CardContent>
           </Card>

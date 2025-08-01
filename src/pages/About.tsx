@@ -28,7 +28,7 @@ const About = () => {
     },
     {
       title: "Consultant Psychiatrist",
-      organization: "Fortis Healthcare, Delhi",
+      organization: "NIMHANS, Delhi",
       duration: "2012 - 2015",
       description: "Clinical practice and patient care in general psychiatry"
     }
@@ -56,7 +56,7 @@ const About = () => {
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               A compassionate psychiatrist dedicated to providing comprehensive mental health care 
-              with over 21 years of experience in treating various psychiatric conditions.
+              with over 24+ years of experience in treating various psychiatric conditions.
             </p>
           </div>
 
@@ -65,13 +65,17 @@ const About = () => {
             <div className="lg:col-span-1">
               <Card className="shadow-soft hover:shadow-medium transition-shadow">
                 <CardContent className="p-6">
-                  <div className="w-32 h-32 bg-gradient-primary rounded-full mx-auto mb-6 flex items-center justify-center">
-                    <span className="text-4xl font-display font-bold text-white">DK</span>
-                  </div>
+                    <div className="w-32 h-32 bg-gradient-primary rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden">
+                    <img
+                      src="/homepagepic.jpg"
+                      alt="Dr. Vishal Chhabra"
+                      className="w-full h-full object-cover rounded-full"
+                    />
+                    </div>
                   <div className="text-center space-y-3">
                     <h3 className="font-display font-semibold text-xl">Dr. Vishal Chhabra</h3>
                     <p className="text-muted-foreground">MBBS, DPM, DNB(Psychiatry)</p>
-                    <Badge variant="secondary" className="mx-auto">21+ Years Experience</Badge>
+                    <Badge variant="secondary" className="mx-auto">24+ Years Experience</Badge>
                   </div>
                   
                   <div className="mt-6 space-y-3">
