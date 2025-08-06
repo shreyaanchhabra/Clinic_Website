@@ -89,7 +89,7 @@ const About = () => {
                     </div>
                     <div className="flex items-center space-x-3 text-sm">
                       <Mail className="w-4 h-4 text-primary" />
-                      <span>drvishal2010@yahoo.com</span>
+                      <span>drvishal2010@gmail.com</span>
                     </div>
                   </div>
                 </CardContent>

@@ -11,7 +11,8 @@ import {
   CheckCircle,
   Phone,
   MessageCircle,
-  Clock
+  Clock,
+  PhoneCall
 } from "lucide-react";
 
 const Treatment = () => {
@@ -53,27 +54,22 @@ const Treatment = () => {
   const treatmentApproaches = [
     {
       title: "Comprehensive Psychiatric Evaluation",
-      description: "Thorough mental health assessments to diagnose conditions and create personalized treatment plans.",
-      duration: "25-30 minutes",
-      frequency: "Weekly or bi-weekly"
+      description: "Thorough mental health assessments to diagnose conditions and create personalized treatment plans."
     },
     {
+      
       title: "Individual Psychotherapy",
       description: "Supportive one-on-one sessions to address personal challenges and improve emotional well-being. Handled by a trained therapist.",
       duration: "40 minutes",
       frequency: "Weekly sessions"
     },
     {
-      title: "Crisis Intervention & Emergency Consultations",
-      description: "Immediate support for acute mental health crises including sucidal ideation or panic eposodes. Can be done via phone or in-person. ",
-      duration: "20-30 minutes",
-      frequency: "As needed"
+      title: "Medication Management",
+      description: "Careful monitoring and adjustment of psychiatric medications. Medicines are prescribed based on individual needs and can be shipped to your home."
     },
     {
-      title: "Medication Management",
-      description: "Careful monitoring and adjustment of psychiatric medications. Medicines are prescribed based on individual needs and can be shipped to your home.",
-      duration: "15 minutes",
-      frequency: "Monthly or as needed"
+      title: "Telepsychiatry and Online Sessions",
+      description: " Convenient and secure video sessions from the comfort of your own home, providing the same high standard of care as in-person visits."
     }
   ];
 
@@ -96,7 +92,7 @@ const Treatment = () => {
 
           {/* Quick Actions */}
           <div className="flex flex-wrap justify-center gap-4 mb-16">
-            <Button variant="hero" size="lg" className="flex items-center space-x-2"
+            {/* <Button variant="hero" size="lg" className="flex items-center space-x-2"
             onClick={() =>
                   window.open(
                     "https://wa.me/917840055258?text=Hi%20Dr.%20Chhabra%2C%20I%27d%20like%20to%20book%20an%20emergency%20appointment.",
@@ -105,7 +101,7 @@ const Treatment = () => {
                 }>
               <Phone className="w-5 h-5" />
               <span>Emergency Consultation</span>
-            </Button>
+            </Button> */}
             <Button variant="appointment" size="lg" className="flex items-center space-x-2"
             onClick={() =>
                   window.open(
@@ -113,7 +109,7 @@ const Treatment = () => {
                     "_blank"
                   )
                 }>
-              <Calendar className="w-5 h-5" />
+              <PhoneCall className="w-5 h-5" />
               <span>Book Appointment</span>
             </Button>
           </div>
@@ -202,14 +198,14 @@ const Treatment = () => {
                       {approach.description}
                     </p>
                     <div className="space-y-2 text-xs">
-                      <div className="flex items-center justify-center space-x-2">
+                      {/* <div className="flex items-center justify-center space-x-2">
                         <Clock className="w-3 h-3 text-primary" />
                         <span>Duration: {approach.duration}</span>
-                      </div>
-                      <div className="flex items-center justify-center space-x-2">
+                      </div> */}
+                      {/* <div className="flex items-center justify-center space-x-2">
                         <Calendar className="w-3 h-3 text-primary" />
                         <span>{approach.frequency}</span>
-                      </div>
+                      </div> */}
                     </div>
                   </CardContent>
                 </Card>
@@ -311,7 +307,7 @@ const ConditionCards = [
                                                                                                 commonSymptoms: ["Difficulty falling or staying asleep", "Daytime fatigue and poor focus", "Nightmares or sleep walking", "Sleep related anxiety"],
                                                                                                     howWeHelp: ["Melatonin and other medications)", "Addressing underlying mental health issues", "Sleep hygiene training", "Supportive counseling"] },
                                                                                                       {
-                                                                                                          title: "Childhood Disorders",
+                                                                                                          title: "ADHD and other Childhood Disorders",
                                                                                                               description: "Evaluation and treatment of ADHD, Autism Spectrum Disorders, behavioral problems, and school-related mental health concerns.",
                                                                                                                   commonSymptoms: ["Inattention or hyperactivity", "Social withdrawal", "Emotional outbursts", "Learning difficulties","Repetitive behaviors (in Autism)"],
                                                                                                                       howWeHelp: ["Behavioral therapy", "Parent management and training", "Medication management", "School support and accommodations"]

@@ -139,6 +139,7 @@ const Gallery = () => {
           <div className="text-center">
             <Button 
               variant="hero" 
+              
               className="flex items-center space-x-5 mx-auto"
               onClick={() => window.open("https://www.instagram.com/drvishal2010", "_blank")}
             >

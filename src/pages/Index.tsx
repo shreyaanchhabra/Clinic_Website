@@ -15,15 +15,16 @@ import {
   Brain,
   Shield,
   Star,
-  ArrowRight
+  ArrowRight,
+  PhoneCall
 } from "lucide-react";
 
 
 const Index = () => {
   const achievements = [
     {
-      number: "10,000+",
-      label: "Patients Treated",
+      number: "50,000+",
+      label: "Patients Successfully Treated",
       icon: Users
     },
     {
@@ -95,7 +96,7 @@ If you ever find yourself in need of support or guidance, I highly recommend rea
       condition: "Family Counseling"
     },
     {
-      name: "Hemant Khemani",
+      name: "Hanish Dhingra",
       rating: 5,
       location: "Delhi",
       text: `Due to some bad memories and incidents that happened in the past, I was a victim of acute depression, brain fogging, sleeping disorder etc. Unlike physical injury which is tangible, brain diseases are very difficult to diagnose and accept.
@@ -120,6 +121,7 @@ We all are haunted by our past, learn from it, accept it and move on. It's not i
       condition: "Panic Attacks and Anxiety"
     }
   ];
+  
 
   return (
     <div className="min-h-screen bg-gradient-secondary">
@@ -143,7 +145,7 @@ We all are haunted by our past, learn from it, accept it and move on. It's not i
                   <img
                   src="/homepagepic2.png"
                   alt="Dr. Vishal Chhabra"
-                  className="rounded-3xl shadow-2xl border-10 border-white/80 group-hover:scale-105 group-hover:shadow-3xl transition-all duration-300 object-cover w-full h-[420px] sm:h-[500px]"
+                  className="rounded-3xl shadow-2xl border-10 border-white/80 group-hover:scale-105 group-hover:shadow-3xl transition-all duration-300 object-cover w-full h-[152px] sm:h-[500px]"
                   style={{
                     objectPosition: "center top"
                   }}
@@ -154,23 +156,23 @@ We all are haunted by our past, learn from it, accept it and move on. It's not i
                   </div>*/}
                 </div>
             </div>
-            {/* End Stylish Image */}
+
             <div className="flex flex-wrap justify-center gap-4 mt-10">
               <Button
-                variant="default"
+                variant="appointment"
                 size="lg"
                 className="flex items-center space-x-2"
                 onClick={() =>
                   window.open(
-                    "https://wa.me/919899524050?text=Hi%20Dr.%20Chhabra%2C%20I%27d%20like%20to%20book%20an%20appointment.",
+                    "https://wa.me/919899524050?text=Hi%20Dr.%20Chhabra%2C%20I%27d%20like%20to%20book%20an%20appointment%20for%20date%20on%20day.",
                     "_blank"
                   )
                 }
               >
-                <Calendar className="w-10 h-10" />
+                <PhoneCall className="w-10 h-10" />
                 <span>Book Appointment</span>
               </Button>
-              <Button
+              {/* <Button
                 variant="outline"
                 size="lg"
                 className="flex items-center space-x-2"
@@ -183,12 +185,12 @@ We all are haunted by our past, learn from it, accept it and move on. It's not i
               >
                 <Phone className="w-5 h-5" />
                 <span>Emergency Consultation</span>
-              </Button>
+              </Button>  */}
             </div>
           </div>
 
           {/* Quick Contact */}
-          <Card className="shadow-medium bg-white/80 backdrop-blur-sm mb-16">
+          <Card className="shadow-medium bg-white/80 backdrop-blur-sm mb-3">
             <CardContent className="p-6">
               <div className="grid md:grid-cols-3 gap-6 text-center">
                 <div className="flex items-center justify-center space-x-3">
@@ -202,7 +204,7 @@ We all are haunted by our past, learn from it, accept it and move on. It's not i
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
                     <p className="font-semibold">Email Us</p>
-                    <p className="text-sm text-muted-foreground">drvishal2010@yahoo.com</p>
+                    <p className="text-sm text-muted-foreground">drvishal2010@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-center space-x-3">
@@ -282,43 +284,62 @@ We all are haunted by our past, learn from it, accept it and move on. It's not i
 
       {/* Testimonials */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-display font-bold mb-4">
-              What Our Patients Say
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Real experiences from people whose lives have been transformed
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="shadow-soft">
-                <CardContent className="p-6">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                  </div>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">"{testimonial.text}"</p>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-semibold">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                    </div>
-                    <Badge variant="outline" className="text-xs">
-                      {testimonial.condition}
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
+  <>
+    <div className="max-w-7xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-display font-bold mb-4">
+          What Our Patients Say
+        </h2>
+        <p className="text-xl text-muted-foreground">
+          Real experiences from people whose lives have been transformed
+        </p>
+      </div>
+      
+      <div className="grid md:grid-cols-3 gap-8">
+        {testimonials.map((testimonial, index) => (
+          <Card key={index} className="shadow-soft">
+            <CardContent className="p-6">
+              <div className="flex mb-4">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <p className="text-muted-foreground mb-4 leading-relaxed">"{testimonial.text}"</p>
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="font-semibold">{testimonial.name}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+                </div>
+                <Badge variant="outline" className="text-xs">
+                  {testimonial.condition}
+                </Badge>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
+    
+    <div className="flex flex-wrap justify-center gap-2 mt-8">
+      <Button
+        variant="hero"
+        size="lg"
+        className="flex items-center space-x-2"
+        onClick={() =>
+          window.open(
+            "https://www.google.com/search?sca_esv=ab8db249d156b33c&sxsrf=AE3TifP771mJst-ZqOTMf_yG4bDhL0Vf5g:1754472188536&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E8nF2bs56fadU7l-RWQ_uTDhMvJS6Z39WZ8uqUXq87y1eoAxZO4XTRP9irRp31EqoAHUJ9bQ9LAG7aTkkANeatwSkYkic9g2DkvCRcHi6-vE_2fxtQ%3D%3D&q=Dr.+Vishal+Chhabra+Reviews&sa=X&ved=2ahUKEwjsssOc7vWOAxW8zzgGHcgwPUwQ0bkNegQIOBAE&biw=1536&bih=730&dpr=1.25.",
+            "_blank"
+          )
+        }
+      >
+        <br></br>
+        <span>Check out our countless reviews on Google</span>
+        <ArrowRight className="w-10 h-10" />
+      </Button>
+    </div>
+  </>
+</section>
+      {/* CTA Section */} 
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <Card className="shadow-strong bg-gradient-hero border-0">
@@ -332,7 +353,7 @@ We all are haunted by our past, learn from it, accept it and move on. It's not i
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Button
-                  variant="hero"
+                  variant="appointment"
                   size="lg"
                   className="flex items-center space-x-2"
                   onClick={() =>
@@ -342,11 +363,11 @@ We all are haunted by our past, learn from it, accept it and move on. It's not i
                     )
                   }
                 >
-                  <Calendar className="w-5 h-5" />
+                  <Phone className="w-5 h-5" />
                   <span>Schedule Consultation</span>
                   <ArrowRight className="w-4 h-4" />
                 </Button>
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline" size="lg" className="flex items-center space-x-2">
                   <Link to="/treatment">
                     Learn More About Our Services
                   </Link>
@@ -365,7 +386,7 @@ We all are haunted by our past, learn from it, accept it and move on. It's not i
 <div className="flex flex-col items-center w-full mt-6 space-y-4">
   <Button
     asChild
-    variant="default"
+    variant="hero"
     size="lg"
     className="flex items-center space-x-2"
   >
